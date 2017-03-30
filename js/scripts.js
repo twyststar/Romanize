@@ -5,6 +5,7 @@
  var fourthRoman = ["",'M', 'MM', 'MMM'];
 var romanizeNum = function(numb) {
   if (isNaN(numb) || (numb >= 3999) || (numb < 0)) {
+    alert("Please Enter A Valid Number");
     document.getElementById("form1").reset();
   } else {
     var numToString = numb.toString();
@@ -12,27 +13,27 @@ var romanizeNum = function(numb) {
     if (numToString.length === 1) {
       var posZero = parseInt(numToString.charAt(0));
       var romanSetOne = numToString.replace(posZero, (firstRoman[posZero]));
-      console.log(romanSetOne);
+      return romanSetOne;
 
     } else if (numToString.length === 2) {
       var posZero = parseInt(numToString.charAt(0));
       var posOne = parseInt(numToString.charAt(1));
       var romanSetTwo = numToString.replace(posZero, (secondRoman[posZero])).replace(posOne, (firstRoman[posOne]));
-      console.log(romanSetTwo);
+      return romanSetTwo;
 
     } else if (numToString.length === 3) {
       var posZero = parseInt(numToString.charAt(0));
       var posOne = parseInt(numToString.charAt(1));
       var posTwo = parseInt(numToString.charAt(2));
       var romanSetThree = numToString.replace(posZero, (thirdRoman[posZero])).replace(posOne, (secondRoman[posOne])).replace(posTwo, (firstRoman[posTwo]))
-      console.log(romanSetThree);
+      return romanSetThree;
     } else {
       var posZero = parseInt(numToString.charAt(0));
       var posOne = parseInt(numToString.charAt(1));
       var posTwo = parseInt(numToString.charAt(2));
       var posThree = parseInt(numToString.charAt(3));
       var romanSetFour = numToString.replace(posZero, (fourthRoman[posZero])).replace(posOne, (thirdRoman[posOne])).replace(posTwo, (secondRoman[posTwo])).replace(posThree, (firstRoman[posThree]));
-      console.log(romanSetFour);
+      return romanSetFour;
     }
   }
 };//romanize function
