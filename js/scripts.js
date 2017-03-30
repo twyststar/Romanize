@@ -1,6 +1,6 @@
 //B.L.
 var romanizeNum = function(numb) {
-  if (isNaN(numb)) {
+  if (isNaN(numb) || (numb >= 3999) || (numb < 0)) {
     console.log('worked');
   }
   console.log(numb);
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 $('form#form1').submit(function(event) {
   event.preventDefault();
-  var userNum = parseInt($('input#input').val());
+  var userNum = Math.round(parseInt($('input#input').val()));
   var res = romanizeNum(userNum);
 
   $('h4#result').text(res);
