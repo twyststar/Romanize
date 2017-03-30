@@ -1,7 +1,8 @@
 //B.L.
 var romanizeNum = function(numb) {
   if (isNaN(numb) || (numb >= 3999) || (numb < 0)) {
-    console.log('worked');
+    console.log('not valid');
+    document.getElementById("form1").reset();
   }
   console.log(numb);
 };//romanize function
