@@ -51,7 +51,7 @@ $('form#form1').submit(function(event) {
   // var userNum = userNum.join();
   var res = romanizeNum(userNum);
 
-  $('h4#result').text(res);
+  $('p#result').text(res);
 
 });//prevent default button
 

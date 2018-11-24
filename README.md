@@ -31,3 +31,6 @@ _HTML/CSS/jquery/JS/Bootstrap_
 
 Copyright (c) 2017 **_Elan Baharie and Starlynne Start _**
 
+---
+permalink: /index.html
+---
